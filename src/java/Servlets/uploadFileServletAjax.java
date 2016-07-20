@@ -6,6 +6,7 @@
 package Servlets;
 
 import com.google.gson.JsonObject;
+import com.sun.org.apache.xerces.internal.impl.dv.util.Base64;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -19,6 +20,8 @@ import org.apache.commons.fileupload.*;
 import org.apache.commons.fileupload.disk.*;
 import org.apache.commons.fileupload.servlet.*;
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.annotation.MultipartConfig;
@@ -66,7 +69,20 @@ public class uploadFileServletAjax extends HttpServlet {
 
                     if (!item.isFormField()) { //determina si es o no un input tipo file
                         String name = new File(item.getName()).getName();
-                        item.write(new File(UPLOAD_DIRECTORY + File.separator + name));
+                        switch (strNombreCampo) {
+                            case "enombre":
+                                item.write(new File(UPLOAD_DIRECTORY + name));
+                                String rutaEname = new String(Base64.encode(Files.readAllBytes(Paths.get(UPLOAD_DIRECTORY + name))));
+                                System.out.println("rutaEresponsable: " + rutaEname);
+                                objJson.addProperty("rutaEname", rutaEname);
+                                break;
+                            case "eresponsable":
+                                item.write(new File(UPLOAD_DIRECTORY + name));
+                                String rutaEresponsable = new String(Base64.encode(Files.readAllBytes(Paths.get(UPLOAD_DIRECTORY + name))));
+                                System.out.println("rutaEresponsable: " + rutaEresponsable);
+                                objJson.addProperty("rutaEresponsable", rutaEresponsable);
+                        }
+                        //item.write(new File(UPLOAD_DIRECTORY + File.separator + name));
                     } else {//entra al else si no es un input tipo file. ejemplo: entran los tipo text, select...
                         System.out.println("Nombre: " + strNombreCampo + "; " + "Value: " + strValorCampo);
                     }

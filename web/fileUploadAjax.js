@@ -16,11 +16,11 @@ $(document).ready(function () {
         formdata = new FormData(form[0]);
         formdata.append('funcion', 'actualizar');//Aumentando valores a nuestro formdata
     }
-        alert("oli. ");
+        alert("oli. "+$("input[name='accion']",form).val());//$("input[name=accion]").val());
 
     var formAction = form.attr('action');//Almacenando en la variable formAction el valor de action del form
     $.ajax({
-        url         : formAction+"?fuente=locura",
+        url         : formAction+"?accion="+$("input[name=accion]").val(),
         data        : formdata,
         cache       : false,
         contentType : false,
@@ -29,6 +29,8 @@ $(document).ready(function () {
         
        }) .done(function(data){
             alert(" succes: "+data.mensaje);
+            $("div#resultado").append("<a href=\"data:application/pdf;base64,"+data.rutaEname+"\" target=\"_blank\">Visualizar</a>");
+            $("div#resultado").append("<a href=\"data:application/pdf;base64,"+data.rutaEresponsable+"\" target=\"_blank\">Visualizar</a>");
         
     });
 });

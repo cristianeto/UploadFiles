@@ -18,7 +18,7 @@
         <!--<form action="SubirArchivoServlet" method="POST" enctype="multipart/form-data"> -->
         <form id="insertar"  action="./uploadFileServletAjax" method="POST" enctype="multipart/form-data"> 
             <input type="text" name="nombre"/><br>
-            <input type="file" name="enombre"/> <br>
+            <input type="file" name="enombre" id="enombre"/> <br>
             <input type="file" name="eresponsable"/> 
             <br />
             <select name="periodo">
@@ -28,15 +28,18 @@
                 <option value="periodo3">periodo 3</option>
             </select>
             <br />
-            
-            <button type="submit" name="accion" value="Guardar">Guardar</button>
+
+            <input type="submit" name="accion" value="Guardar" />
         </form> 
-        
-        
-        
+
+        <div id="resultado">
+
+        </div>       
+        <input type="file" name="nuevoFile" id="nuevoFile" />
+        <hr>
         <footer>
             <h4>Cristianeto</h4>
-            <a href="./index.jsp">Subir archivos sin AJAX</a>
+            <a href="./index.jsp">Subir archivos sin AJAX</a><br>
         </footer>
         <script type="text/javascript" src="fileUploadAjax.js"></script>
     </body> 
