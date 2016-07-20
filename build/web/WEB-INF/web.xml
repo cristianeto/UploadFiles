@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>uploadFileServlet</servlet-name>
+        <servlet-class>Servlets.uploadFileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>uploadFileServlet</servlet-name>
+        <url-pattern>/uploadFileServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>uploadFileServletAjax</servlet-name>
+        <servlet-class>Servlets.uploadFileServletAjax</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>uploadFileServletAjax</servlet-name>
+        <url-pattern>/uploadFileServletAjax</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+</web-app>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group name="sgcIPEC">
+            <file>file:/Users/Cristian/Documents/TESIS/App/javaUploadFiles/web/index.jsp</file>
+            <file>file:/Users/Cristian/Documents/TESIS/App/javaUploadFiles/web/uploadFile.jsp</file>
+            <file>file:/Users/Cristian/Documents/TESIS/App/javaUploadFiles/src/java/utilidades/uploadFileUtility.java</file>
+            <file>file:/Users/Cristian/Documents/TESIS/App/javaUploadFiles/src/java/Servlets/uploadFileServlet.java</file>
+        </group>
+        <group name="TITULACIÓN"/>
+        <group name="IPEC">
+            <file>file:/Users/Cristian/Documents/TESIS/App/javaUploadFiles/web/fileUploadAjax.js</file>
+            <file>file:/Users/Cristian/Documents/TESIS/App/javaUploadFiles/src/java/utilidades/uploadFileUtility.java</file>
+            <file>file:/Users/Cristian/Documents/TESIS/App/javaUploadFiles/src/java/Servlets/uploadFileServlet.java</file>
+            <file>file:/Users/Cristian/Documents/TESIS/App/javaUploadFiles/src/java/Servlets/uploadFileServletAjax.java</file>
+            <file>file:/Users/Cristian/Documents/TESIS/App/javaUploadFiles/web/fileUploadAjax.jsp</file>
+            <file>file:/Users/Cristian/Documents/TESIS/App/javaUploadFiles/web/index.jsp</file>
+            <file>file:/Users/Cristian/Documents/TESIS/App/javaUploadFiles/src/java/utilidades/MensajesGlobal.java</file>
+            <file>file:/Users/Cristian/Documents/TESIS/App/javaUploadFiles/web/WEB-INF/web.xml</file>
+            <file>file:/Users/Cristian/Documents/TESIS/App/javaUploadFiles/src/java/utilidades/Mensajes.properties</file>
+        </group>
+    </open-files>
+</project-private>
